@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vi.Pro.GPT - Creador de Páginas Web</title>
+  <meta name="description" content="Crea páginas web profesionales con asistencia de IA">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+  <!-- Fondo animado -->
+  <div class="background-animation"></div>
+  
+  <!-- Contenedor principal -->
+  <main class="main-content">
+    <div class="chat-container">
+      <header class="chat-header">
+        <div class="header-content">
+          <!-- Logo eliminado según solicitud -->
+          <div class="header-actions">
+            <button id="clearChat" class="action-btn" title="Limpiar conversación">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+            <button id="themeToggle" class="action-btn" title="Cambiar tema">
+              <i class="fas fa-moon"></i>
+            </button>
+            <button id="helpBtn" class="action-btn" title="Ayuda">
+              <i class="fas fa-question-circle"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Acciones rápidas eliminadas según solicitud -->
+      <div class="quick-actions-placeholder"></div>
+      
+      <div id="chatBox" class="chat-box">
+        <div class="message bot welcome-message">
+          <div class="message-avatar">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <div class="message-content">
+            <h3>¡Hola! Soy Vi.Pro.GPT</h3>
+            <p>Tu asistente especializado en creación de páginas web profesionales. Puedo ayudarte a:</p>
+            <ul>
+              <li>Diseñar landing pages efectivas</li>
+              <li>Crear portafolios impresionantes</li>
+              <li>Desarrollar tiendas online</li>
+              <li>Optimizar sitios existentes</li>
+              <li>Y mucho más...</li>
+            </ul>
+            <p>¿En qué proyecto quieres trabajar hoy?</p>
+            <div class="message-time" id="welcome-time"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="input-container">
+        <div class="input-group">
+          <div class="input-wrapper">
+            <textarea id="userInput" placeholder="Describe tu proyecto web o haz una pregunta..." rows="1"></textarea>
+            <div class="input-actions">
+              <button id="imageBtn" class="action-btn attach-btn" title="Subir imagen de referencia">
+                <i class="fas fa-image"></i>
+              </button>
+              <input type="file" id="imageInput" accept="image/*" style="display: none;">
+              <button id="voiceBtn" class="action-btn voice-btn" title="Entrada de voz">
+                <i class="fas fa-microphone"></i>
+              </button>
+            </div>
+          </div>
+          <button id="sendBtn" class="send-btn" title="Enviar mensaje">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <div class="input-info">
+          <span id="charCount">0/2000</span>
+          <span class="hint">Presiona Enter para enviar, Shift+Enter para nueva línea</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Panel de ayuda -->
+  <div id="helpPanel" class="help-panel">
+    <div class="help-content">
+      <div class="help-header">
+        <h3>Centro de Ayuda</h3>
+        <button id="closeHelp" class="close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="help-sections">
+        <div class="help-section">
+          <h4>¿Cómo funciona?</h4>
+          <p>Describe tu proyecto web y recibirás asistencia especializada en diseño, desarrollo y optimización.</p>
+        </div>
+        <div class="help-section">
+          <h4>Funcionalidades</h4>
+          <ul>
+            <li>Asistencia en diseño web responsive</li>
+            <li>Generación de código HTML/CSS/JS</li>
+            <li>Análisis de imágenes para diseño</li>
+            <li>Recomendaciones de optimización</li>
+            <li>Patrones de diseño modernos</li>
+          </ul>
+        </div>
+        <div class="help-section">
+          <h4>Consejos</h4>
+          <ul>
+            <li>Sé específico con tus requerimientos</li>
+            <li>Incluye imágenes de referencia cuando sea posible</li>
+            <li>Utiliza los botones de acción rápida</li>
+            <li>Pregunta sobre mejores prácticas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notificaciones -->
+  <div id="notification" class="notification"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
